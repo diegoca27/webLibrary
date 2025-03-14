@@ -1,0 +1,54 @@
+*{
+  background-color:rgb(24, 26, 26);
+
+}
+
+.App{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  row-gap: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: aliceblue;
+}
+
+.search-bar{
+  background-color: rgb(50, 60, 68);
+  width: 50vh;
+  height: 5vh;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 2px solid aliceblue;
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.headers > th{
+  color: aliceblue;
+}
+
+.rows > td{
+  color: aliceblue;
+}
+
+table{
+  border: 2px solid aliceblue;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td{
+  text-align: center;
+  border: 3px solid aliceblue;
+  padding: 8px 20px;
+}
+
+.text{
+  color: aliceblue;
+}
