@@ -1,13 +1,22 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 
-function SearchComponent({ onSearch }){
-    const [input, setInput] = useState("")
+function SearchComponent({ onSearch }) {
+  const [input, setInput] = useState("");
 
-    const onChange = (event) => {
-        setInput(event.target.value)
-        onSearch(event.target.value)
-    };
-    return (
+  useEffect(() => {
+    // Bonus Challenge 1
+    const debounceTimeout = setTimeout(() => {
+        onSearch(input);
+    }, 300); 
+
+    return () => clearTimeout(debounceTimeout);
+  }, [input, onSearch]);
+
+  const onChange = (event) => {
+      setInput(event.target.value);
+  };
+
+  return (
     <div>
       <input
         className="search-bar"
@@ -17,7 +26,7 @@ function SearchComponent({ onSearch }){
         onChange={onChange}
       />
     </div>
-    );
+  );
 }
 
 export default SearchComponent;
